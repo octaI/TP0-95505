@@ -10,19 +10,21 @@ public class NodoTests {
         NodoNull unNodo = new NodoNull();
         unNodo.getSiguienteNodo();
     }
+
     @Test(expected = ExceptionColaVacia.class)
     public void testNodoVacioNoMeDejaVerDato() throws ExceptionColaVacia {
         NodoNull unNodo = new NodoNull();
         unNodo.getDatoNodo();
     }
+
     @Test
-    public void testNodoComun(){
+    public void testNodoComun() {
         Nodo<Integer> unNodo = new Nodo<>(1);
         assertTrue(unNodo.getDatoNodo() == 1);
     }
 
     @Test
-    public void testNodoComunDevuelveUnoCuandoRecorre(){
+    public void testNodoComunDevuelveUnoCuandoRecorre() {
         Nodo<Integer> unNodo = new Nodo<>(1);
         assertTrue(unNodo.recorrerNodo() == 1);
     }
