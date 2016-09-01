@@ -2,20 +2,19 @@ package tp.octai.tp0;
 
 
 class Cola<T> implements Queue<T> {
-    private NodoAbs primerNodo;
+    private NodoAbs<T> primerNodo;
 
     Cola() {
 
-        primerNodo = new NodoNull();
+        primerNodo = new NodoNull<>();
     }
 
     public int size()  {
         return primerNodo.recorrerNodo();
     }
 
-    @SuppressWarnings("unchecked")
     public T top() {
-        return (T)primerNodo.getDatoNodo();
+        return primerNodo.getDatoNodo();
     }
 
     public void remove()  {
@@ -23,7 +22,7 @@ class Cola<T> implements Queue<T> {
     }
 
     public void add(T item) {
-        primerNodo = primerNodo.setSiguienteNodo( new Nodo<>(item));
+        primerNodo = primerNodo.setSiguienteNodo( item);
     }
 
 

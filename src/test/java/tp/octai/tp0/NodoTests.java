@@ -20,7 +20,7 @@ public class NodoTests {
     @Test
     public void testNodoComun() {
         Nodo<Integer> unNodo = new Nodo<>(1);
-        assertTrue((Integer)unNodo.getDatoNodo() == 1);
+        assertTrue(unNodo.getDatoNodo() == 1);
     }
 
     @Test
@@ -32,8 +32,7 @@ public class NodoTests {
     @Test
     public void testNodoComunSeteaBienNodoSiguiente() {
         Nodo<Integer> unNodo = new Nodo<>(1);
-        Nodo<Integer> otroNodo = new Nodo<>(5);
-        unNodo.setSiguienteNodo(otroNodo);
-        assertTrue((Integer)unNodo.getSiguienteNodo().getDatoNodo() == 5);
+        unNodo.setSiguienteNodo(5);
+        assertTrue(unNodo.getSiguienteNodo().getDatoNodo() == 5);
     }
 }

@@ -1,10 +1,10 @@
 package tp.octai.tp0;
 
 
-class Nodo<T> implements NodoAbs {
+class Nodo<T> implements NodoAbs<T> {
     private T datoNodo;
 
-    private NodoAbs siguienteNodo = new NodoNull();
+    private NodoAbs<T> siguienteNodo = new NodoNull<>();
 
     Nodo(T dato) {
 
@@ -12,12 +12,12 @@ class Nodo<T> implements NodoAbs {
     }
 
     @Override
-    public Object getDatoNodo() {
+    public T getDatoNodo() {
         return datoNodo;
     }
 
     @Override
-    public NodoAbs getSiguienteNodo() {
+    public NodoAbs<T> getSiguienteNodo() {
         return siguienteNodo;
     }
 
@@ -27,8 +27,8 @@ class Nodo<T> implements NodoAbs {
     }
 
     @Override
-    public NodoAbs setSiguienteNodo(NodoAbs unNodo) {
-        siguienteNodo = siguienteNodo.setSiguienteNodo(unNodo);
+    public NodoAbs<T> setSiguienteNodo(T datoNuevo) {
+        siguienteNodo = siguienteNodo.setSiguienteNodo(datoNuevo);
         return this;
     }
 

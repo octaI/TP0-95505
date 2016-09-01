@@ -1,11 +1,11 @@
 package tp.octai.tp0;
 
 
-class NodoNull implements NodoAbs {
+class NodoNull<T> implements NodoAbs<T> {
 
 
     @Override
-    public Object getDatoNodo()   {
+    public T getDatoNodo()   {
         throw new AssertionError();
     }
 
@@ -15,7 +15,7 @@ class NodoNull implements NodoAbs {
     }
 
     @Override
-    public NodoAbs getSiguienteNodo()   {
+    public NodoAbs<T> getSiguienteNodo()   {
         throw new AssertionError();
     }
 
@@ -25,8 +25,8 @@ class NodoNull implements NodoAbs {
     }
 
     @Override
-    public NodoAbs setSiguienteNodo(NodoAbs unNodo) {
-        return unNodo;
+    public NodoAbs<T> setSiguienteNodo(T unDato) {
+        return new Nodo<>(unDato);
     }
 
 

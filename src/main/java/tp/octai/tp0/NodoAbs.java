@@ -1,14 +1,14 @@
 package tp.octai.tp0;
 
 
-interface NodoAbs {
-    Object getDatoNodo();
+interface NodoAbs<T> {
+    T getDatoNodo();
 
-    NodoAbs getSiguienteNodo();
+    NodoAbs<T> getSiguienteNodo();
 
     int recorrerNodo();
 
-    NodoAbs setSiguienteNodo(NodoAbs unNodo);
+    NodoAbs<T> setSiguienteNodo(T datoNuevo);
 
     int esNodoComun();
 }
