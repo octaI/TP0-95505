@@ -13,8 +13,9 @@ class Cola<T> implements Queue<T> {
         return primerNodo.recorrerNodo();
     }
 
+    @SuppressWarnings("unchecked")
     public T top() {
-        return (T) primerNodo.getDatoNodo();
+        return (T)primerNodo.getDatoNodo();
     }
 
     public void remove()  {
