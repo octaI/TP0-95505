@@ -5,14 +5,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class NodoTests {
-    @Test(expected = ExceptionColaVacia.class)
-    public void testNodoVacioNoMeDejaIrAlSiguiente() throws ExceptionColaVacia {
+    @Test(expected = AssertionError.class)
+    public void testNodoVacioNoMeDejaIrAlSiguiente() {
         NodoNull unNodo = new NodoNull();
         unNodo.getSiguienteNodo();
     }
 
-    @Test(expected = ExceptionColaVacia.class)
-    public void testNodoVacioNoMeDejaVerDato() throws ExceptionColaVacia {
+    @Test(expected = AssertionError.class)
+    public void testNodoVacioNoMeDejaVerDato() {
         NodoNull unNodo = new NodoNull();
         unNodo.getDatoNodo();
     }
@@ -20,7 +20,7 @@ public class NodoTests {
     @Test
     public void testNodoComun() {
         Nodo<Integer> unNodo = new Nodo<>(1);
-        assertTrue(unNodo.getDatoNodo() == 1);
+        assertTrue((Integer)unNodo.getDatoNodo() == 1);
     }
 
     @Test
@@ -30,10 +30,10 @@ public class NodoTests {
     }
 
     @Test
-    public void testNodoComunSeteaBienNodoSiguiente() throws ExceptionColaVacia {
+    public void testNodoComunSeteaBienNodoSiguiente() {
         Nodo<Integer> unNodo = new Nodo<>(1);
         Nodo<Integer> otroNodo = new Nodo<>(5);
         unNodo.setSiguienteNodo(otroNodo);
-        assertTrue(unNodo.getSiguienteNodo().getDatoNodo() == 5);
+        assertTrue((Integer)unNodo.getSiguienteNodo().getDatoNodo() == 5);
     }
 }

@@ -13,14 +13,14 @@ public class QueueTests {
         assertEquals(unaCola.isEmpty(), true);
     }
 
-    @Test(expected = ExceptionColaVacia.class)
-    public void testVerTopColaVaciaTiraException() throws ExceptionColaVacia {
+    @Test(expected = AssertionError.class)
+    public void testVerTopColaVaciaTiraException() {
         Cola<Integer> unaCola = new Cola<>();
         unaCola.top();
     }
 
-    @Test(expected = ExceptionColaVacia.class)
-    public void testRemoveColaVaciaTiraException() throws ExceptionColaVacia {
+    @Test(expected = AssertionError.class)
+    public void testRemoveColaVaciaTiraException() {
         Cola<Integer> unaCola = new Cola<>();
         unaCola.remove();
     }

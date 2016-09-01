@@ -1,14 +1,14 @@
 package tp.octai.tp0;
 
 
-abstract class NodoAbs<T> {
-    public abstract T getDatoNodo() throws ExceptionColaVacia;
+interface NodoAbs {
+    Object getDatoNodo();
 
-    public abstract NodoAbs<T> getSiguienteNodo() throws ExceptionColaVacia;
+    NodoAbs getSiguienteNodo();
 
-    public abstract int recorrerNodo();
+    int recorrerNodo();
 
-    public abstract NodoAbs<T> setSiguienteNodo(NodoAbs<T> unNodo);
+    NodoAbs setSiguienteNodo(NodoAbs unNodo);
 
-    public abstract int esNodoComun();
+    int esNodoComun();
 }

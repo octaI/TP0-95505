@@ -1,12 +1,12 @@
 package tp.octai.tp0;
 
 
-class NodoNull<T> extends NodoAbs {
+class NodoNull implements NodoAbs {
 
 
     @Override
-    public Object getDatoNodo() throws ExceptionColaVacia {
-        throw new ExceptionColaVacia();
+    public Object getDatoNodo()   {
+        throw new AssertionError();
     }
 
     @Override
@@ -15,8 +15,8 @@ class NodoNull<T> extends NodoAbs {
     }
 
     @Override
-    public NodoAbs getSiguienteNodo() throws ExceptionColaVacia {
-        throw new ExceptionColaVacia();
+    public NodoAbs getSiguienteNodo()   {
+        throw new AssertionError();
     }
 
     @Override
